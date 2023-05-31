@@ -14,7 +14,7 @@
 <meta property="og:description" content="PC Initial and ConfigurationHomebrew https:&#x2F;&#x2F;brew.sh&#x2F;  Homebrew是mac中一款软件安装工具，类似Linux中的apt-get、yum等。 安装官方给出的安装命令为： 1&#x2F;bin&#x2F;bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;HE">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-05-31T06:14:13.336Z">
-<meta property="article:modified_time" content="2023-05-31T07:58:58.818Z">
+<meta property="article:modified_time" content="2023-05-31T12:54:37.748Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -107,7 +107,10 @@
 <p>Hexo是一款好用的博客框架，它能够快速的将你写的Markdown文件渲染成Html静态页面。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装hexo cli</span></span><br><span class="line">npm install hexo-cli -g</span><br><span class="line"><span class="comment"># 初始化一个项目，项目名为blog</span></span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line"><span class="comment"># 本地启动一个服务，可在浏览器预览博客网站效果</span></span><br><span class="line">hexo server</span><br><span class="line"><span class="comment"># 创建一个markdown文件</span></span><br><span class="line">hexo new <span class="string">&quot;File Name&quot;</span></span><br><span class="line"><span class="comment"># 为markdown文件生成html页面</span></span><br><span class="line">hexo g</span><br></pre></td></tr></table></figure>
 
-<h3 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h3><h3 id="归档管理"><a href="#归档管理" class="headerlink" title="归档管理"></a>归档管理</h3>
+<h3 id="部署到Github"><a href="#部署到Github" class="headerlink" title="部署到Github"></a>部署到Github</h3><p><code>hexo g</code>命令会生成一个<code>public</code>目录，可以手动把该目录中的内容上传到GitHub。<br>Hexo也支持<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/one-command-deployment">一键部署</a>，具体使用方式如下：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装hexo的git插件</span></span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"><span class="comment"># 修改_config.yml中关于deploy的配置信息</span></span><br><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repo: git@github.com:luocan17/luocan17.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<h3 id="归档管理"><a href="#归档管理" class="headerlink" title="归档管理"></a>归档管理</h3>
       
     </div>
     <footer class="article-footer">
